@@ -9,8 +9,9 @@ import os
 
 def generate_qr(request):
     # Get the current request's domain dynamically
-    current_host = request.build_absolute_uri  # Removes trailing slash
-    full_url = f"{current_host}"  # Generates dynamic URL
+    current_host = request.build_absolute_uri("/")[:-1]  # Removes trailing slash
+    endpoint = "/menu/download"  # Replace with your actual endpoint
+    full_url = f"{current_host}{endpoint}"  # Generates dynamic URL
 
     # Generate QR Code
     qr = qrcode.QRCode(
