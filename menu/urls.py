@@ -22,5 +22,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include("qrcodeBar.urls")),
-    path('', include("menuFile.urls")),
+    path('/menu/download', include("menuFile.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
