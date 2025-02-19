@@ -5,7 +5,7 @@ from django.http import JsonResponse, FileResponse
 
 # Create your views here.
 
-def menu(request):
+def menu_dload(request):
     """Automatically download an image from the app's media folder"""
 
     # Define the image path (stored inside media/images/)
